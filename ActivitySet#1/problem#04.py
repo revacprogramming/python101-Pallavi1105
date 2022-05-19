@@ -1,8 +1,14 @@
-hrs = input("Enter Hours:")
-h = float(hrs)
-xx =float(input("Enter the Rate:"))
-if h <= 40:
- 	print( h  * xx)
-elif h > 40:
-	print(40* xx + (h-40)*1.5*xx)
-
+def earning(hrs, rate):
+    wage = hrs * rate
+    return wage
+def output(wage, hrs, rate):
+    if hrs <= 40:
+        print(wage)
+    elif hrs > 40:
+        print(40 * rate + (hrs - 40) * 1.5 * rate)
+def main():
+    hrs = float(input("Enter Hours:"))
+    rate = float(input("Enter the Rate:"))
+    wage = (earning(hrs, rate))
+    output(wage, hrs, rate)
+main()
