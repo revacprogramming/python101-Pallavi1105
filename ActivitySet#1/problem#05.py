@@ -4,7 +4,12 @@ def computepay(h, r):
   else:
     p=h*r
   return p
-hrs = float(input("Enter hours? "))
-rte = float(input("Enter rate per hour? "))
-p = computepay(hrs, rte)
-print("Pay", p)
+def output(p):
+  print("pay:",p) 
+def main():
+  h = float(input("Enter hours? "))
+  r = float(input("Enter rate per hour? "))
+  p = computepay(h, r)
+  output(p)
+main()
+
